@@ -4,27 +4,14 @@ html {
     font-size: 100%;
 }
 
-.circle-cursor {
-    position: fixed;
-    left: 0;
-    top: 0;
+.cursor {
     pointer-events: none;
-
-    &--outer {
-      width: 100vw;
-      height: 100vh;
-      z-index: 12000;
-    }
-
-    &--inner {
-      width: 5px;
-      height: 5px;
-      left: -2.5px;
-      top: -2.5px;
-      border-radius: 50%;
-      z-index: 11000;
-      background-color: $accent-color;
-    }
+    position: fixed;
+    padding: 0.3rem;
+    background-color: $accent-color;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
 }
 
 #app {
@@ -67,6 +54,9 @@ html {
         .nav-link {
             transition: all 0.3s ease;
 
+            &:hover ~ .cursor {
+                transform: translate(-5px, -5px) scale(3);
+            }
             
         }
         
