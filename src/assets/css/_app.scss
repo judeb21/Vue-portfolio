@@ -1,0 +1,98 @@
+@import '_color.scss';
+
+html {
+    font-size: 100%;
+}
+
+.circle-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+
+    &--outer {
+      width: 100vw;
+      height: 100vh;
+      z-index: 12000;
+    }
+
+    &--inner {
+      width: 5px;
+      height: 5px;
+      left: -2.5px;
+      top: -2.5px;
+      border-radius: 50%;
+      z-index: 11000;
+      background-color: $accent-color;
+    }
+}
+
+#app {
+    font-family: 'Avenir Book';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 100%;
+  }
+  
+  #nav {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .nav-wrap {
+        position: fixed;
+        font-size: 0.91667vw;
+        line-height: 0.91667vw;
+        letter-spacing: 0;
+        display: inline-block;
+
+        &:first-child {
+            top: 4rem;
+            left: 4.95833vw;
+        }
+
+        &:nth-child(2) {
+            top: 4rem;
+            right: 4.95833vw;
+        }
+
+        &:nth-child(3) {
+            bottom: 4rem;
+            left: 4.95833vw;
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+
+            
+        }
+        
+        a {
+            font-weight: bold;
+            color: #2c3e50;
+            text-decoration: none;
+            
+            &.router-link-exact-active {
+            color: #42b983;
+            }
+
+            span {
+                display: inline-block;
+                color: inherit;
+                font-size: inherit;
+                transition: transform 0.1s linear;
+
+                &:hover {
+                    font-size: 0.81667vw;
+                }
+            }
+        }
+    }
+}
+
+
+
+

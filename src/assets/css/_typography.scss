@@ -1,0 +1,7 @@
+@import '_color.scss';
+$primary-font: 'Avenir Medium';
+
+h1 {
+    color: $secondary-color;
+    font-family: $primary-font;
+}

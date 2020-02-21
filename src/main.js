@@ -4,6 +4,9 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
+//typical import
+import { gsap, TweenMax } from "gsap";
+
 Vue.config.productionTip = false
 
 new Vue({
